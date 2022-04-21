@@ -662,19 +662,6 @@ Class
 	
 	<tr>
 		<td align="right" valign="top" width="1%">
-			<code>private&nbsp;any</code>
-		</td>
-		<td>
-			<strong><a href="ConfigBuilder.html#getJavaSafeParams()">getJavaSafeParams</A></strong>()
-			<br>
-			
-		</td>
-	</tr>
-	
-	
-	
-	<tr>
-		<td align="right" valign="top" width="1%">
 			<code>string</code>
 		</td>
 		<td>
@@ -701,11 +688,13 @@ Class
 	
 	<tr>
 		<td align="right" valign="top" width="1%">
-			<code>string</code>
+			<code>private&nbsp;any</code>
 		</td>
 		<td>
 			<strong><a href="ConfigBuilder.html#getParams()">getParams</A></strong>()
 			<br>
+			
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Getter overload to return a Java-safe parameter array or struct.
 			
 		</td>
 	</tr>
@@ -1301,38 +1290,6 @@ Class
 	<hr>
 
 	
-	<a name="getJavaSafeParams()"><!-- --></a>
-	<h3>
-		getJavaSafeParams
-		
-	</h3>
-
-	<kbd>private any <strong>getJavaSafeParams</strong>()</kbd>
-
-	<br><br>
-
-	
-
-	
-
-	
-		
-		
-	
-
-	
-	
-
-	
-
-	
-
-	
-
-	</dl>
-	<hr>
-
-	
 	<a name="getLinesBetweenQueries()"><!-- --></a>
 	<h3>
 		getLinesBetweenQueries
@@ -1403,11 +1360,14 @@ Class
 		
 	</h3>
 
-	<kbd>public string <strong>getParams</strong>()</kbd>
+	<kbd>private any <strong>getParams</strong>()</kbd>
 
 	<br><br>
 
 	
+		<p>Getter overload to return a Java-safe parameter array or struct.
+Only an array or struct can be cast to the appropriate type upon passing to the Formatter object.</p>
+	
 
 	
 
@@ -1421,6 +1381,11 @@ Class
 
 	
 
+	
+		<dl>
+			<dt><strong>Returns:</strong></dt>
+			<dd>Array|Struct parameters.</dd>
+		</dl>
 	
 
 	

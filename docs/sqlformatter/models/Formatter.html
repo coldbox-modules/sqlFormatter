@@ -309,6 +309,57 @@ Class
 		</td>
 	</tr>
 	
+	
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any</code>
+		</td>
+		<td>
+			<strong><a href="Formatter.html#params()">params</A></strong>
+			<br>
+			
+			<br><br>
+			<ul>
+			
+				
+			
+				
+				<li class="label label-default label-annotations">access = public</li>
+				
+			
+				
+			
+				
+			
+				
+				<li class="label label-default label-annotations">returntype = any</li>
+				
+			
+				
+			
+				
+			
+				
+			
+			</ul>
+
+		</td>
+		<td align="right" valign="top" width="1%">
+			
+		</td>
+		<td align="right" valign="top" width="1%">
+			<code>
+				true
+			</code>
+		</td>
+		<td align="right" valign="top" width="1%">
+			<code>
+				false
+			</code>
+		</td>
+	</tr>
+	
 	</tr>
 </table>
 
@@ -371,6 +422,21 @@ Class
 	
 	<tr>
 		<td align="right" valign="top" width="1%">
+			<code>private&nbsp;any</code>
+		</td>
+		<td>
+			<strong><a href="Formatter.html#getParams()">getParams</A></strong>()
+			<br>
+			
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Getter overload to return a Java-safe parameter array or struct.
+			
+		</td>
+	</tr>
+	
+	
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
 			<code>string</code>
 		</td>
 		<td>
@@ -402,8 +468,36 @@ Class
 			<code>any</code>
 		</td>
 		<td>
+			<strong><a href="Formatter.html#setParams()">setParams</A></strong>(any params)
+			<br>
+			
+		</td>
+	</tr>
+	
+	
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any</code>
+		</td>
+		<td>
 			<strong><a href="Formatter.html#setSQLFormatter()">setSQLFormatter</A></strong>(any SQLFormatter)
 			<br>
+			
+		</td>
+	</tr>
+	
+	
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code><a href="../../sqlformatter/models/Formatter.html" title="class in sqlformatter.models">Formatter</a></code>
+		</td>
+		<td>
+			<strong><a href="Formatter.html#withParams()">withParams</A></strong>([any params])
+			<br>
+			
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Configure parameters to use for query placeholders.
 			
 		</td>
 	</tr>
@@ -528,6 +622,50 @@ Class
 
 		<hr>
 	
+		
+		<a name="params()"><!-- --></a>
+		<h3>params</h3>
+
+		<kbd>
+			property any
+			<strong>params</strong>
+			
+		</kbd>
+
+		<br><br>
+		
+
+		<dl>
+		<dt><strong>Attributes:</strong></dt>
+		
+			
+		
+			
+			<dd><code>access</code> - public</dd>
+			
+		
+			
+			<dd><code>required</code> - false</dd>
+			
+		
+			
+		
+			
+			<dd><code>returntype</code> - any</dd>
+			
+		
+			
+		
+			
+		
+			
+			<dd><code>serializable</code> - true</dd>
+			
+		
+		</dl>
+
+		<hr>
+	
 
 
 
@@ -590,6 +728,46 @@ Not chainable.</p>
 		<dl>
 			<dt><strong>Returns:</strong></dt>
 			<dd>prettified SQL string</dd>
+		</dl>
+	
+
+	
+
+	</dl>
+	<hr>
+
+	
+	<a name="getParams()"><!-- --></a>
+	<h3>
+		getParams
+		
+	</h3>
+
+	<kbd>private any <strong>getParams</strong>()</kbd>
+
+	<br><br>
+
+	
+		<p>Getter overload to return a Java-safe parameter array or struct.
+Only an array or struct can be cast to the appropriate type upon passing to the Formatter object.</p>
+	
+
+	
+
+	
+		
+		
+	
+
+	
+	
+
+	
+
+	
+		<dl>
+			<dt><strong>Returns:</strong></dt>
+			<dd>Array|Struct parameters.</dd>
 		</dl>
 	
 
@@ -672,6 +850,45 @@ Not chainable.</p>
 	<hr>
 
 	
+	<a name="setParams()"><!-- --></a>
+	<h3>
+		setParams
+		
+	</h3>
+
+	<kbd>public any <strong>setParams</strong>(any params)</kbd>
+
+	<br><br>
+
+	
+
+	
+
+	
+		
+		
+	
+
+	
+	
+
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>params</code></dd>
+		
+		</dl>
+	
+
+	
+
+	
+
+	</dl>
+	<hr>
+
+	
 	<a name="setSQLFormatter()"><!-- --></a>
 	<h3>
 		setSQLFormatter
@@ -699,6 +916,47 @@ Not chainable.</p>
 		<dt><strong>Parameters:</strong></dt>
 		
 		<dd><code>SQLFormatter</code></dd>
+		
+		</dl>
+	
+
+	
+
+	
+
+	</dl>
+	<hr>
+
+	
+	<a name="withParams()"><!-- --></a>
+	<h3>
+		withParams
+		
+	</h3>
+
+	<kbd>public <a href="../../sqlformatter/models/Formatter.html" title="class in sqlformatter.models">Formatter</a> <strong>withParams</strong>([any params])</kbd>
+
+	<br><br>
+
+	
+		<p>Configure parameters to use for query placeholders.</p>
+	
+
+	
+
+	
+		
+		
+	
+
+	
+	
+
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>params</code> - Array|Struct</dd>
 		
 		</dl>
 	
