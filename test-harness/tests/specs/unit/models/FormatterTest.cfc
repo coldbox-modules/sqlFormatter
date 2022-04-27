@@ -56,33 +56,12 @@ __'name'"
 				);
 			} );
 
-			it( "works with positional placeholders", function() {
+			it( "works with positional placeholders", function(){
 				var formatted = variables.model
-							.of("postgresql")
-							.withParams( [ "Michael", "18" ] )
-							.format("SELECT * FROM users WHERE name = ? AND age = ?" );
+					.of( "postgresql" )
+					.withParams( [ "Michael", "18" ] )
+					.format( "SELECT * FROM users WHERE name = ? AND age = ?" );
 
-				expect( formatted ).toBe(
-					"SELECT
-  *
-FROM
-  users
-WHERE
-  name = Michael
-  AND age = 18");
-			});
-
-			/**
-			 * Skipped due to issue with SQLFormatter lib
-			 * @cite https://github.com/vertical-blank/sql-formatter/issues/57
-			 */
-			xit( "works with named placeholders", function() {
-				var formatted = variables.model
-							.of("postgresql")
-							.withParams( { "name" : "Michael", "age" : "18" } )
-							.format("SELECT * FROM users WHERE name = :name AND age = :age" );
-				
-							// writeOutput( "<pre>#formatted#</pre>" );
 				expect( formatted ).toBe(
 					"SELECT
   *
@@ -92,7 +71,30 @@ WHERE
   name = Michael
   AND age = 18"
 				);
-			});
+			} );
+
+			/**
+			 * Skipped due to issue with SQLFormatter lib
+			 *
+			 * @cite https://github.com/vertical-blank/sql-formatter/issues/57
+			 */
+			xit( "works with named placeholders", function(){
+				var formatted = variables.model
+					.of( "postgresql" )
+					.withParams( { "name" : "Michael", "age" : "18" } )
+					.format( "SELECT * FROM users WHERE name = :name AND age = :age" );
+
+				// writeOutput( "<pre>#formatted#</pre>" );
+				expect( formatted ).toBe(
+					"SELECT
+  *
+FROM
+  users
+WHERE
+  name = Michael
+  AND age = 18"
+				);
+			} );
 		} );
 	}
 

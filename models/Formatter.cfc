@@ -2,9 +2,7 @@ component accessors="true" {
 
 	property name="SQLFormatter" inject="javaloader:com.github.vertical_blank.sqlformatter.SqlFormatter";
 
-	property
-		name   ="params"
-		type   ="any";
+	property name="params" type="any";
 
 	/**
 	 * Constructor.
@@ -28,8 +26,8 @@ component accessors="true" {
 	 *
 	 * Not chainable.
 	 *
-	 * @sql messy SQL string to format.
-     * @formatConfig instance of com.github.vertical_blank.sqlformatter.core.FormatConfig.
+	 * @sql          messy SQL string to format.
+	 * @formatConfig instance of com.github.vertical_blank.sqlformatter.core.FormatConfig.
 	 *
 	 * @return prettified SQL string
 	 */
@@ -38,7 +36,7 @@ component accessors="true" {
 		if ( !isNull( arguments.formatConfig ) ) {
 			return formatter.format( arguments.sql, arguments.formatConfig );
 		}
-		if ( !isNull( getParams() ) ){
+		if ( !isNull( getParams() ) ) {
 			return formatter.format( arguments.sql, getParams() );
 		}
 		return formatter.format( arguments.sql );
@@ -62,7 +60,7 @@ component accessors="true" {
 	 * @return Array|Struct parameters.
 	 */
 	private function getParams(){
-		if ( isNull( variables.params ) ){
+		if ( isNull( variables.params ) ) {
 			return [];
 		}
 		if ( !isStruct( variables.params ) && !isArray( variables.params ) ) {
@@ -70,4 +68,5 @@ component accessors="true" {
 		}
 		return variables.params;
 	}
+
 }

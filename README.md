@@ -107,6 +107,16 @@ To get started hacking on SQLFormatter:
 5. Run tests - `box testbox run`
 6. Push up a [pull request](https://github.com/michaelborn/sqlFormatter/pulls)
 
+### Updating the SQLFormatter Dependency
+
+To bump the embedded [SQLFormatter library](https://github.com/vertical-blank/sql-formatter), run the following from the module directory root - making sure to replace `2.0.3` with the latest version number:
+
+```bash
+rm lib/sql-formatter-*.jar && cd lib && curl -LO https://search.maven.org/remotecontent?filepath=com/github/vertical-blank/sql-formatter/2.0.3/sql-formatter-2.0.3.jar
+```
+
+This should place a `sql-formatter-<VERSION>.jar` jar file in the `lib/` directory. All that's needed after that is a `git add lib && git commit && git push` to update the repo.
+
 ********************************************************************************
 Copyright Since 2005 ColdBox Framework by Luis Majano and Ortus Solutions, Corp
 www.coldbox.org | www.luismajano.com | www.ortussolutions.com
