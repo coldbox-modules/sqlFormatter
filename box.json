@@ -13,7 +13,11 @@
     "shortDescription":"A CFML wrapper for the Vertical Blank sql-formatter java library",
     "slug":"sqlformatter",
     "type":"modules",
-    "keywords":[ "SQL","prettifier","beautify" ],
+    "keywords":[
+        "SQL",
+        "prettifier",
+        "beautify"
+    ],
     "license":[
         {
             "type":"BSD-3",
@@ -22,7 +26,6 @@
     ],
     "contributors":[],
     "dependencies":{
-        "sql-formatter":"jar:https://search.maven.org/remotecontent?filepath=com/github/vertical-blank/sql-formatter/2.0.3/sql-formatter-2.0.3.jar",
         "cbjavaloader":"^2.1.0+5"
     },
     "devDependencies":{
@@ -50,7 +53,6 @@
     },
     "installPaths":{
         "coldbox":"test-harness/coldbox/",
-        "sql-formatter":"lib/sql-formatter/",
         "testbox":"test-harness/testbox/",
         "cbjavaloader":"modules/cbjavaloader/"
     }

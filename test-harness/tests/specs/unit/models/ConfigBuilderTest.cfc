@@ -67,6 +67,7 @@ __slug IN (a, b, c)"
 
 			/**
 			 * Skipped due to issue with SQLFormatter lib
+			 *
 			 * @cite https://github.com/vertical-blank/sql-formatter/issues/57
 			 */
 			xit( "works with named placeholders", function(){
