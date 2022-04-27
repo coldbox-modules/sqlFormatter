@@ -71,7 +71,7 @@ var prettySQL = getInstance( "Formatter@sqlFormatter" )
                     .format( "SELECT * FROM user WHERE name= :michael and age= :age" );
 ```
 
-> **Warning:** Only certain dialects support named parameters, and the syntax differs for each. Use `postgresql` for standard `:name` syntax, or `tsql` for `@foo` syntax.
+> **Warning:** Only certain dialects support parameters, and each dialect uses different syntax. Use the `postgresql` dialect for the `:name` syntax, or `tsql` for `@foo` syntax.
 
 > **Warning:** There is an issue in the underlying library with named placeholders. See [issue #57 on the SQLFormatter repository](https://github.com/vertical-blank/sql-formatter/issues/57) for more details.
 
