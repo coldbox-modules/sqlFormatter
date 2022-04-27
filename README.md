@@ -2,14 +2,14 @@
 
 A CFML wrapper for the Vertical Blank sql-formatter java library.
 
-[![Release](https://github.com/michaelborn/SQLFormatter/actions/workflows/ci.yml/badge.svg)](https://github.com/michaelborn/SQLFormatter/actions/workflows/ci.yml)
+[![Release](https://github.com/coldbox-modules/sqlFormatter/actions/workflows/ci.yml/badge.svg)](https://github.com/coldbox-modules/sqlFormatter/actions/workflows/ci.yml)
 
 ## Installation
 
 Using CommandBox:
 
 ```js
-box install SQLFormatter
+box install sqlFormatter
 ```
 
 ## Usage
@@ -17,14 +17,14 @@ box install SQLFormatter
 Basic formatting is done via the `format()` method:
 
 ```js
-var prettySQL = getInstance( "Formatter@SQLFormatter" )
+var prettySQL = getInstance( "Formatter@sqlformatter" )
                     .format( "SELECT COUNT(*) FROM users" );
 ```
 
 For database-specific syntax, you can [choose a dialect](#dialect) using `.of()`:
 
 ```js
-var prettySQL = getInstance( "Formatter@SQLFormatter" )
+var prettySQL = getInstance( "Formatter@sqlformatter" )
                     .of( "postgres" )
                     .format( "SELECT COUNT(*) FROM users" );
 ```
@@ -34,7 +34,7 @@ var prettySQL = getInstance( "Formatter@SQLFormatter" )
 You can also specify advanced configuration options via the `ConfgBuilder`:
 
 ```js
-var formatConfig = getInstance( "ConfigBuilder@sqlFormatter" )
+var formatConfig = getInstance( "ConfigBuilder@sqlformatter" )
                         .setIndent("    ") // Defaults to two spaces
                         .setUppercase(true) // Defaults to false (not safe to use when SQL dialect has case-sensitive identifiers)
                         .setLinesBetweenQueries(2) // Defaults to 1
@@ -45,7 +45,7 @@ var formatConfig = getInstance( "ConfigBuilder@sqlFormatter" )
 You can then pass the `FormatConfig` object as the second parameter in the `Formatter.format()` method call:
 
 ```js
-var prettySQL = getInstance( "Formatter@sqlFormatter" )
+var prettySQL = getInstance( "Formatter@sqlformatter" )
                     .format( "SELECT * FROM pages ORDER BY 'name'", formatConfig );
 ```
 
@@ -56,7 +56,7 @@ SQLFormatter supports parameter replacement using either an array of parameters 
 For positional parameters, pass an array:
 
 ```js
-var prettySQL = getInstance( "Formatter@sqlFormatter" )
+var prettySQL = getInstance( "Formatter@sqlformatter" )
                     .of( "mysql" )
                     .withParams( [ "a", "b", "c" ] )
                     .format( "SELECT * FROM pages WHERE slug IN [?, ?, ?]" );
@@ -65,7 +65,7 @@ var prettySQL = getInstance( "Formatter@sqlFormatter" )
 or for named parameters, use a key/value struct:
 
 ```js
-var prettySQL = getInstance( "Formatter@sqlFormatter" )
+var prettySQL = getInstance( "Formatter@sqlformatter" )
                     .of( "postgres" )
                     .withParams( { "name" : "Michael", "age" : "18" } )
                     .format( "SELECT * FROM user WHERE name= :michael and age= :age" );
