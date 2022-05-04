@@ -2,7 +2,7 @@
     "name":"sqlFormatter",
     "version":"1.1.1",
     "organization": "ortus-solutions",
-    "location" : "https://downloads.ortussolutions.com/ortussolutions/coldbox-modules/sqlformatter/@build.version@/sqlformatter-@build.version@.zip",
+    "location" : "forgeboxStorage",
     "author":"Michael Born <michael@ortussolutions.com>",
     "homepage":"https://github.com/coldbox-modules/sqlFormatter",
     "documentation":"https://github.com/coldbox-modules/sqlFormatter",
