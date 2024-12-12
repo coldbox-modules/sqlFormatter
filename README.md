@@ -4,6 +4,12 @@ A CFML wrapper for the Vertical Blank sql-formatter java library.
 
 [![Release](https://github.com/coldbox-modules/sqlFormatter/actions/workflows/ci.yml/badge.svg)](https://github.com/coldbox-modules/sqlFormatter/actions/workflows/ci.yml)
 
+## System requirements
+
+* [Boxlang](https://www.boxlang.io)
+* Adobe 2018+
+* Lucee 5
+
 ## Installation
 
 Using CommandBox:
