@@ -45,6 +45,11 @@ jobs:
       - name: Setup CommandBox CLI
         uses: Ortus-Solutions/setup-commandbox@main
 
+      - name: Update Commandbox Boxlang Module
+        if: ${{ matrix.cfengine == 'boxlang@1' }}
+        run:
+          box install --force commandbox-boxlang
+
       # Not Needed in this module
       #- name: Setup Environment For Testing Process
       #  working-directory: ./test-harness
